@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>标题</title>
+</head>
+<body>
+<form method="POST" action="/hurun">
+    <select name="the_region_selected">
+        {% for item in the_select_region %}
+            <option value="{{ item }}">{{ item }}</option>
+        {% endfor %}
+    </select>
+<p><input value='Do it!' type='SUBMIT'></p>
+</form>
+
+<div id="bar" style="float: left;">
+{{ the_plot_all|safe }}
+</div>
+<div id="line" style="float: left;">
+{{ the_plot_all3|safe }}
+</div>
+<div id="map" style="float: left;">
+{{ the_plot_all2|safe }}
+</div>
+<div id="map" style="float: left;">
+{{ the_plot_all4|safe }}
+</div>
+
+<div id="map">
+{{ the_res|safe }}
+</div>
+
+
+</body>
+</html>

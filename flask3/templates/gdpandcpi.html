@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Awesome-pyecharts</title>
+            <script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts.min.js"></script>
+            <script type="text/javascript" src="https://assets.pyecharts.org/assets/maps/china.js"></script>
+<link href="../static/base.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<style type="text/css">
+    #rig{
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+    }
+    </style>
+    <a href="/" id="rig">
+                <button>返回首页</button>
+    </a>
+    <div id="57f9779cb9294a538da237d351551aa9" class="chart-container" style="width:900px; height:500px;"></div>
+<ul>
+    	<button type="button" class="mui-btn mui-btn-primary mui-btn-outlined">
+		<a style="line-height: 16px" href="/cpi?type=a">居民消费水平</a>
+	</button>
+    <button type="button" class="mui-btn mui-btn-primary mui-btn-outlined">
+    <a style="line-height: 16px" href="/gdpandcpi?type=a">人均GDP与人均消费水平</a>
+    </button>
+    <button type="button" class="mui-btn mui-btn-primary mui-btn-outlined">
+    <a style="line-height: 16px" href="/ditu?type=a">GDP水平情况</a>
+    </button>
+    <button type="button" class="mui-btn mui-btn-primary mui-btn-outlined">
+    <a style="line-height: 16px" href="/gdpi?type=a">分省人均GDP</a>
+    </button>
+</ul>
+    <script>
+        var chart_57f9779cb9294a538da237d351551aa9 = echarts.init(
+            document.getElementById('57f9779cb9294a538da237d351551aa9'), 'white', {renderer: 'canvas'});
+        var option_57f9779cb9294a538da237d351551aa9 = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "elasticOut",
+    "animationDelay": 1000,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "color": [
+        "#c23531",
+        "#2f4554",
+        "#61a0a8",
+        "#d48265",
+        "#749f83",
+        "#ca8622",
+        "#bda29a",
+        "#6e7074",
+        "#546570",
+        "#c4ccd3",
+        "#f05b72",
+        "#ef5b9c",
+        "#f47920",
+        "#905a3d",
+        "#fab27b",
+        "#2a5caa",
+        "#444693",
+        "#726930",
+        "#b2d235",
+        "#6d8346",
+        "#ac6767",
+        "#1d953f",
+        "#6950a1",
+        "#918597"
+    ],
+    "series": [
+        {
+            "type": "bar",
+            "name": "2017\u4eba\u5747GDP",
+            "data": [
+                "128994",
+                "118944",
+                "45387",
+                "42060",
+                "63764",
+                "53527",
+                "54838",
+                "41916",
+                "126634",
+                "107150",
+                "92057",
+                "43401",
+                "82677",
+                "43424",
+                "72807",
+                "46674",
+                "60199",
+                "49558",
+                "80932",
+                "38102",
+                "48430",
+                "63442",
+                "44651",
+                "37956",
+                "34221",
+                "39267",
+                "57266",
+                "28497",
+                "44047",
+                "50765",
+                "44941"
+            ],
+            "barCategoryGap": "20%",
+            "label": {
+                "show": true,
+                "position": "top",
+                "margin": 8
+            }
+        },
+        {
+            "type": "bar",
+            "name": "2017\u4eba\u5747\u6d88\u8d39\u6c34\u5e73",
+            "data": [
+                "52912",
+                "38975",
+                "15893",
+                "18132",
+                "23909",
+                "24866",
+                "15083",
+                "18859",
+                "53617",
+                "39796",
+                "33851",
+                "17141",
+                "25969",
+                "17290",
+                "28353",
+                "17842",
+                "21642",
+                "19418",
+                "30762",
+                "16064",
+                "20939",
+                "22927",
+                "17920",
+                "16349",
+                "15831",
+                "10990",
+                "18485",
+                "14203",
+                "18020",
+                "21058",
+                "16736"
+            ],
+            "barCategoryGap": "20%",
+            "label": {
+                "show": true,
+                "position": "top",
+                "margin": 8
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "2017\u4eba\u5747GDP",
+                "2017\u4eba\u5747\u6d88\u8d39\u6c34\u5e73"
+            ],
+            "selected": {
+                "2017\u4eba\u5747GDP": true,
+                "2017\u4eba\u5747\u6d88\u8d39\u6c34\u5e73": true
+            },
+            "show": true,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0
+    },
+    "xAxis": [
+        {
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": false,
+                "lineStyle": {
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            },
+            "data": [
+                "\u5317\u4eac",
+                "\u5929\u6d25",
+                "\u6cb3\u5317",
+                "\u5c71\u897f",
+                "\u5185\u8499\u53e4",
+                "\u8fbd\u5b81",
+                "\u5409\u6797",
+                "\u9ed1\u9f99\u6c5f",
+                "\u4e0a\u6d77",
+                "\u6c5f\u82cf",
+                "\u6d59\u6c5f",
+                "\u5b89\u5fbd",
+                "\u798f\u5efa",
+                "\u6c5f\u897f",
+                "\u5c71\u4e1c",
+                "\u6cb3\u5357",
+                "\u6e56\u5317",
+                "\u6e56\u5357",
+                "\u5e7f\u4e1c",
+                "\u5e7f\u897f",
+                "\u6d77\u5357",
+                "\u91cd\u5e86",
+                "\u56db\u5ddd",
+                "\u8d35\u5dde",
+                "\u4e91\u5357",
+                "\u897f\u85cf",
+                "\u9655\u897f",
+                "\u7518\u8083",
+                "\u9752\u6d77",
+                "\u5b81\u590f",
+                "\u65b0\u7586"
+            ]
+        }
+    ],
+    "yAxis": [
+        {
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": false,
+                "lineStyle": {
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            }
+        }
+    ],
+    "title": [
+        {
+            "text": "\u4eba\u5747GDP\u4e0e\u4eba\u5747\u6d88\u8d39\u6c34\u5e73",
+            "subtext": "/\u5143"
+        }
+    ]
+};
+        chart_57f9779cb9294a538da237d351551aa9.setOption(option_57f9779cb9294a538da237d351551aa9);
+    </script>
+	<h3>数据分析</h3>
+	<h4>图抽取了2017年分省人均GDP和2017年分省人均消费水平数据，图中的数据分析显示，人均消费水平一般为人均消费水平的40&的水平。</h4>
+	<h4>图中可以分析出人均GDP高的地区，相对的人均消费水平也会相对较高，少的地区也会相对少。</h4>
+	<h3>结论</h3>
+	<h4>中国经济的发展呈现出地区不平衡状态。</h4>
+	<h4>中国GDP创造高的地区相对的消费水平也会较高。</h4>
+	<h4>中国经济的发展确实落实到了居民的头上，GDP的不断创造之下，居民的消费水平也在不断地提升。</h4>
+	<h4>中国经济发展呈现了地区发展不平衡状态，随着经济地不断发展，地区的不平衡状态也在不断地扩大，继续的扩大可能会造成社会性矛盾。</h4>
+	<h3>建议</h3>
+	<h4>坚持经济发展优先原则，继续保持经济的持续增长。</h4>
+	<h4>平衡地区发展不平衡状态，扶持中西部经济发展，实现先富带动后富策略，坚持走共同富裕道路。</h4>
+	<h4>实行产业转移，将东部过剩的产业转移到中西部，实现产业扶贫，才是可持续化发展的选择。</h4>
+	<h4>坚持重点扶贫和精准扶贫策略，实现“两个一百年”奋斗目标。</h4>
+</body>
+</html>
